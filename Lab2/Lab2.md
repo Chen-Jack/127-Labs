@@ -313,10 +313,20 @@ print("You entered, x)
 ```
 When it runs, you will have the ability to type something and send it to the program after hitting enter.
 ![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/input1.png)
-</br>
+</br> </br>
 After I type 32 and hit enter, the value is sent back to the program and stored into the variable x.
 ![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/input2.png)
 </br>
+
+Helpful Trick
+```python
+#Instead of writing
+print("Enter Something")
+x = input()
+
+#You can simplify it as the following. (They are both the same thing)
+x = input("Enter Something")
+```
 
 #### NOTE (IMPORTANT)
 Everything you enter when using input() will become a string, even if you enter a number.
@@ -334,6 +344,42 @@ https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
 ![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/asciiTable.png)
 
 </br>
+This gives us two new commands, ord() and chr().
+
+#### ord(). Gets the ASCII value of a symbol
+```python
+# Look at the table to confirm the answers
+print( ord("A") ) #Note that you must make sure you pass in strings
+
+```
+
+
+### chr(). Gets the symbol of an ASCII value
+```python
+# Basically does the opposite of ord(). If you give it number, it gets the symbol
+
+print( chr(65) ) # Prints "A"
+print( chr(53) ) # Prints "5"
+print( chr(32) ) # Prints " "
+```
+
+#### Examples of using ord() and chr()
+```python
+
+Question) Given an input, what is the ascii value of each symbol.
+
+value = input("Enter something") #Remember that input always returns a string
+for character in value: #Strings are iterable, so the loop will go through each symbol in the string
+ print( ord(character) )
+ 
+Question) What symbol comes after "$" (Without looking at the table)
+# Step 1, get the value of "$"
+ascii_value = ord("$") #ord() gets the ascii value
+ascii_value = ascii_value + 1 #Adds 1 to asciiValue.
+next_character = chr(ascii_value) #Turns the ascii value back into a symbol
+
+print(next_character) #Output is "%". Check the table to confirm for yourself.
+```
 
 ## String Operations
 Backtracking a bit, strings have access to certain functions that may be useful to you. They are the following.
