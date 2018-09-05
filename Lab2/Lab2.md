@@ -72,6 +72,23 @@ print (1 + 1 ) #Output is 2. Because the inputs are not surrounded by quotes. Th
 print ("1" + "1") #Output is "11"
 
 ```
+Lastly, you have the ability to access a specific symbol of a string.
+```python
+
+example = "Hello There" #This is a string because it has quotes around it
+
+# To access the first symbol of a string, we write
+print( example[0] ) #Will print the first symbol in example. Output is "H"
+
+#Remember that indexs start at 0
+
+print( example[3] ) #Will print the 4th symbol. Output is "l"
+
+print( example[5] ) #Will print the 6th symbol. Output is " ". A space character
+
+print (example[4353543] ) # Will cause an error. Our string does not have that many symbols in it.
+
+```
 
 # Lab 2
 ## A new type, Lists (Also called Arrays)
@@ -90,7 +107,7 @@ finalListExample = [ "1", 4, [ "a", "b", "c"], 0 , "hello"] # A mixed list, cont
 simpleList = [1,2,3] 
 mixedList = [ simpleList, 3, "a"] # This list also contains another list inside it.
 ```
-One important property is the ability to access things inside the list.
+Just like strings, you have the ability access things inside the list.
 ```python
 # To access a spot inside your list, do the following
 
@@ -111,7 +128,9 @@ print(item) # Error. myList only has 5 things inside it. There is no 999999th in
 
 ```
 
-## How do Loops work?
+
+
+## Loop Refresher
 Remember that to do something multiple times, we followed this general template
 ```python
 # Remember that x is just a variable name, we can call it whatever we want
@@ -128,4 +147,111 @@ for i in range(10):
 for dsfdsfdsfsd in range(50): # Again, dsfdsfdsfds is just a variable
   print("Yes")
 ```
-So what does the variable do?
+## How do Loops work, why is the variable important?
+Loops work by traveling through something called an iterable. An iterable can be simply understood as ...
+> A data type that has a order to it.
+```python
+
+# This is an iterable cause there is an order.
+x = [5 , 1, 5] # First value is 5, next is 1, last value is 5.
+
+# This is also an iterable
+name = "Jack"  # First value is "J", then "a", "c", last value is "k".
+
+# Thus, we should know that
+a = [1,2,3] # LISTS ARE ITERABLE
+b = "A sentence" #STRINGS ARE ITERABLE
+c = 3 # A single integer is NOT iterable.
+d = [3] # A list containing a single integer is iterable
+
+```
+
+# Loops work by having a variable assign itself to each value of an iterable on each step (IMPORTANT)
+```python
+# This is an oversimplification, but this depicts the essence of what is happening
+
+#Note that the variable is called i.
+for i in range(5):
+ print(i)
+ 
+#First, range(5) will "basically" return a list starting from 0, up to but not including 5.
+# Aka range(5) = [0,1,2,3,4]
+
+#So when we say
+for i in range(5):
+ print(i)
+ 
+#It logically becomes.
+for i in [0,1,2,3,4]:
+ print(i)
+
+# Therefore. i start at 0 on the first step, and will reassign itself on each step.
+for i in [0,1,2,3,4]:  # First output is 0, then 1, then 2, then 3, and then 4.
+ print(i)
+ 
+# Further proof.
+for number in [5,2,1]: #First output is 5, then 2, and then 1.
+ print(i)
+ 
+# This works with strings because strings are also iterable (Has an order)
+for letter in "WOW": # First output is "W", then "O", and then "W"
+ print(letter)
+
+# Examples.
+# Question 1) Print all numbers from 0 to 10.
+# We know that range(11) will "basically" return the list of numbers [0,1,2,3,4,5,6,7,8,9,10]. 
+# Remember range(11) starts at 0, and stops, but does not include 11.
+
+for number in range(11): # Since we are actually using the numbers inside range(11), lets use a meaningful variable name
+ print(number)
+ 
+# Question 2) Print hello 3 times.
+# We will use range(3) because we want something to happen 3 times.
+for whocares in range(3): #Since we aren't using the numbers directly in range(3), we can use any variable name.
+ print(number)
+
+```
+
+## Extra Range() Uses
+As we just talked about, range(n) basically returns a List of numbers from 0 to n (but not including n)
+```python
+range(3) basically becomes [0,1,2]
+range(5) basically becomes [0,1,2,3,4]
+range(2) basically becomes [0,1]
+```
+Range has extra uses, for example range(start, stop). When you specify two numbers in range, it basically does the same thing as before, but you can choose where the values start.
+```python
+#range(5) basically becomes [0,1,2,3,4]
+#range(2,5) starts at 2, and stops (but doesn't include) 5. So it becomes [2,3,4]
+
+#range(10) basically becomes [0,1,2,3,4,5,6,7,8,9]
+#range(3,10) will do the same as range(10), but start at 3. [3,4,5,6,7,8,9]
+
+#Example. Print all numbers from 5 to 20
+# Normally, if we use range(21), (Again, not range(20) because range(20) does not include the number 20),
+# it would start at 0. Since we want to start at 5, we use range(5,21):
+
+for value in range(5,21): #Output is all numbers from 5 to 20
+ print(value)
+ 
+for i in range(1,11): # Prints all numbers from 1 to 10, not including 0
+ print(i)
+```
+The other use case is range(start, stop, step). When you specify 3 numbers, it works like range(start,stop), but you can specify the change between each value.
+```python
+# range(2,11)  =>  [2,3,4,5,6,7,8,9,10]  #Stops at 11, but does not include it.
+# range(2,11,2)  Does the same thing as range(2,11), but now each number jumps by 2
+# So it logically becomes, [2,4,6,8,10]
+
+# range(1,11,3) => [1, 4, 7, 10] #Values start at 1, stops at 11, but not including it, and each number jumps by 3
+
+# range(0, 10, 2) => [0,2,4,6,8] #Remember! Stops, but does not include the last number.
+
+# Example, Print all even numbers from 0 to 100.
+# We use range(0,101, 2) because we start at 0, stop at 101 (but not including 101), and increases by 2 each time.
+for evenNumber in range(0,101,2):
+ print(evenNumber)
+```
+
+#### Is there a way to go from 0 to 100, and jump by 2's using range(start,step)?
+No, if you want to do steps, you have to specify 3 numbers. Even if you start at 0.
