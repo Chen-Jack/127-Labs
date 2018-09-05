@@ -300,3 +300,14 @@ for countdown in range(10,-1, -1): #Prints 10,9,8,7,6,5,4,3,2,1,0.
  print(countdown)
 
 ```
+
+## Inputs
+print() allows the code to send a message to the user. input() is the opposite, and allows the user to send a message to the code.
+```python
+# Note, input() is a command. You won't see the effects of it in the code side, only when it is being run.
+
+#When I execute this, you should be prompted on the OTHER window, to enter a value.
+print("Enter a number")
+x = input()
+print("You entered, x)
+```
