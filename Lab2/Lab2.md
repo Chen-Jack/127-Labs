@@ -311,3 +311,15 @@ print("Enter a number")
 x = input()
 print("You entered, x)
 ```
+When it runs, you will have the ability to type something and send it to the program after hitting enter.
+![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/input1.png)
+</br>
+After I type 32 and hit enter, the value is sent back to the program and stored into the variable x.
+![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/input2.png)
+</br>
+
+#### NOTES
+Everything you enter when using input() will become a string, even if you enter a number.
+</br>
+Note that myNumber + myNumber is doing string concatenation, not regular addition.
+![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/stringInput.png)
