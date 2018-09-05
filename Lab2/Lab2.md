@@ -191,7 +191,7 @@ for i in [0,1,2,3,4]:  # First output is 0, then 1, then 2, then 3, and then 4.
  
 # Further proof.
 for number in [5,2,1]: #First output is 5, then 2, and then 1.
- print(i)
+ print(number)
  
 # This works with strings because strings are also iterable (Has an order)
 for letter in "WOW": # First output is "W", then "O", and then "W"
