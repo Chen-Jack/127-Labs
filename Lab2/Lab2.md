@@ -256,9 +256,6 @@ for evenNumber in range(0,101,2):
  print(evenNumber)
 ```
 
-#### Is there a way to go from 0 to 100, and jump by 2's using range(start,step)?
-No, if you want to do steps, you have to specify 3 numbers. Even if you start at 0. </br>
-So use range(0,101,2).
 
 ## Final Loop Review
 ```python
