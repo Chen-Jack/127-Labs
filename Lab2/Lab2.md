@@ -1,4 +1,4 @@
-This is meant to be a supplement to https://stjohn.github.io/teaching/csci127/f18/lab2.html
+This is meant to be a supplement to https://stjohn.github.io/teaching/csci127/f18/lab2.html.
 
 ## Type/Variables Refresher
 Remember that we were introduced to two Python types so far:
@@ -453,7 +453,7 @@ print(locationOfFirstA) #Prints 0
 ```
 
 ## Finished reading this entire document?
-Go through this lab one more time. You should be able to have no trouble understanding everything.
+Click on the link and read through lab one more time. You should be able to have no trouble understanding everything.
 https://stjohn.github.io/teaching/csci127/f18/lab2.html
 
 If you understand everything in the Professor's Lab, you are ready to move on.
