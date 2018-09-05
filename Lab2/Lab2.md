@@ -301,7 +301,7 @@ for countdown in range(10,-1, -1): #Prints 10,9,8,7,6,5,4,3,2,1,0.
 
 ```
 
-## Inputs
+## input()
 print() allows the code to send a message to the user. input() is the opposite, and allows the user to send a message to the code.
 ```python
 # Note, input() is a command. You won't see the effects of it in the code side, only when it is being run.
@@ -309,7 +309,7 @@ print() allows the code to send a message to the user. input() is the opposite, 
 #When I execute this, you should be prompted on the OTHER window, to enter a value.
 print("Enter a number")
 x = input()
-print("You entered, x)
+print("You entered", x)
 ```
 When it runs, you will have the ability to type something and send it to the program after hitting enter.
 ![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/input1.png)
@@ -361,6 +361,7 @@ print( ord("A") ) #Note that you must make sure you pass in strings
 print( chr(65) ) # Prints "A"
 print( chr(53) ) # Prints "5"
 print( chr(32) ) # Prints " "
+print( chr(99) ) # Prints "c"
 ```
 
 #### Examples of using ord() and chr()
