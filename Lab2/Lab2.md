@@ -254,4 +254,49 @@ for evenNumber in range(0,101,2):
 ```
 
 #### Is there a way to go from 0 to 100, and jump by 2's using range(start,step)?
-No, if you want to do steps, you have to specify 3 numbers. Even if you start at 0.
+No, if you want to do steps, you have to specify 3 numbers. Even if you start at 0. </br>
+So use range(0,101,2).
+
+## Final Loop Review
+```python
+
+for i in range(3): # Prints 0, 1, 2
+ print(i)
+
+for letter in range(3): # Prints 0, 1, 2.  Variables are just names, don't let them fool you
+ print(letter)
+ 
+word = "Hello"
+for x in word: # Prints, "H", "e", "l", "l", "o"
+ print(x)
+
+myList = [4, 1, "ah"]
+for item in myList: #Prints 4, 1, "ah"
+ print(item)
+ 
+for i in 3:  # Error, 3 is not iterable. You can't traverse numbers
+ print(i)
+ 
+for i in [3]: # Prints 3.   Lists are iterable though, even if has a single value
+ print(i)
+ 
+for letter in "": #Prints nothing, because "" has nothing inside it. Note, this is not an error. This is expected
+ print(letter)
+ 
+for letter in : # Error, didn't specify something to loop through
+ print(letter)
+ 
+for item in []: #Prints nothing, because the list has nothing inside it. Note this is not an error.
+ print(item)
+ 
+for num in range(2,5): # Prints 2, 3, 4
+ print(num)
+ 
+for ok in range(2,7,2): # Range(2,7,2) becomes [0,2,4,6]. Prints 0, 2, 4, 6
+ print(ok)
+ 
+#The values start at 10, and stops at -1, but not including -1. So it actually ends at 0.
+for countdown in range(10,-1, -1): #Prints 10,9,8,7,6,5,4,3,2,1,0. 
+ print(countdown)
+
+```
