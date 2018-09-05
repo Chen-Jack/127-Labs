@@ -133,7 +133,6 @@ print(item) # Error. myList only has 5 things inside it. There is no 999999th in
 ## Loop Refresher
 Remember that to do something multiple times, we followed this general template
 ```python
-# Remember that x is just a variable name, we can call it whatever we want
 
 # Prints "Hello" 5 times
 for x in range(5):
