@@ -318,8 +318,91 @@ After I type 32 and hit enter, the value is sent back to the program and stored 
 ![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/input2.png)
 </br>
 
-#### NOTES
+#### NOTE (IMPORTANT)
 Everything you enter when using input() will become a string, even if you enter a number.
 </br>
-Note that myNumber + myNumber is doing string concatenation, not regular addition.
+When I entered 1, myNumber + myNumber ended up doing string concatenation, not regular addition. This caused result to become "11", and not 2.
 ![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/stringInput.png)
+
+
+## ASCII
+Computers basically read everything in binary, including letters and strings. Since binary is just a numbers, all characters have a number associated with it. Here you can see all the numbers associated with each symbol/character/letter.
+So for example, "A" is 65, "b" is 98, " " (space character) is 32, and "5" is 53.
+</br>
+
+https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
+![alt text](https://github.com/Chen-Jack/127-Labs/blob/master/Lab2/asciiTable.png)
+
+</br>
+
+## String Operations
+Backtracking a bit, strings have access to certain functions that may be useful to you. They are the following.
+```python
+x = "Some String"
+
+len(x)
+x.upper()
+x.lower()
+x.count()
+x.find()
+```
+
+#### len()
+Technically len works on lists too, but basically, len gives you the length of something.
+```python
+myList = [5, 5, 5, 5] # There are 4 things inside my list
+myString = "Hello There" # There are 11 characters in my string, including the space
+
+listLength = len(myList)
+stringLength = len(myString)
+print( listLength ) # Prints 4
+print( stringLength ) # Prints 11
+print( len("abc") ) # Prints 3
+```
+
+#### .upper()
+Makes every letter in your string capital.
+```python
+x = "hello"
+print( x.upper() ) #outputs "HELLO"
+
+variable = "Jack"
+print( variable.upper() ) #outputs "JACK"
+```
+
+#### .lower()
+Makes all the letters in your string lowercase
+```python
+x = "HELLO"
+print( x.lower() ) #outputs "hello"
+
+variable = "Jack"
+print( variable.lower() ) #outputs "jack"
+```
+
+#### .count( ? )
+Counts how many times your item appears in the string
+```python
+x = "Hello World"
+totalO = x.count("o") # Counts how many time "o" (case sensitive) appears in the string
+print( totalO ) . #Prints 2
+
+y = "Whats up"
+totalSpaces = x.count(" ") # Counts how many times the space character appears
+print( totalSpaces ) #Prints 1
+```
+
+#### .find(?)
+Finds the first spot where your item appears in the string
+```python
+
+#Checks where "e" (case sensitive) appears first. Since we start at 0, e appears at index 1. (aka spot 2)
+x = "Test String"
+spotOfFirstE = x.find("e") 
+print (spotOfFirstE ) #Prints 1.
+
+y = "aaaaaa"
+locationOfFirstA = y.find('a') #Remember it looks for the first 'a', which is index 0.
+print(locationOfFirstA) #Prints 0
+```
+
