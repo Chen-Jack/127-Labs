@@ -218,6 +218,8 @@ range(3) basically becomes [0,1,2]
 range(5) basically becomes [0,1,2,3,4]
 range(2) basically becomes [0,1]
 ```
+
+#### range(start, stop)
 Range has extra uses, for example range(start, stop). When you specify two numbers in range, it basically does the same thing as before, but you can choose where the values start.
 ```python
 #range(5) basically becomes [0,1,2,3,4]
@@ -236,6 +238,8 @@ for value in range(5,21): #Output is all numbers from 5 to 20
 for i in range(1,11): # Prints all numbers from 1 to 10, not including 0
  print(i)
 ```
+
+#### range(start, stop, step)
 The other use case is range(start, stop, step). When you specify 3 numbers, it works like range(start,stop), but you can specify the change between each value.
 ```python
 # range(2,11)  =>  [2,3,4,5,6,7,8,9,10]  #Stops at 11, but does not include it.
