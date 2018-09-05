@@ -354,7 +354,7 @@ print( ord("A") ) #Note that you must make sure you pass in strings
 ```
 
 
-### chr(). Gets the symbol of an ASCII value
+#### chr(). Gets the symbol of an ASCII value
 ```python
 # Basically does the opposite of ord(). If you give it number, it gets the symbol
 
@@ -366,13 +366,13 @@ print( chr(32) ) # Prints " "
 #### Examples of using ord() and chr()
 ```python
 
-Question) Given an input, what is the ascii value of each symbol.
+# Question) Given an input, what is the ascii value of each symbol.
 
 value = input("Enter something") #Remember that input always returns a string
 for character in value: #Strings are iterable, so the loop will go through each symbol in the string
  print( ord(character) )
  
-Question) What symbol comes after "$" (Without looking at the table)
+# Question) What symbol comes after "$" (Without looking at the table)
 # Step 1, get the value of "$"
 ascii_value = ord("$") #ord() gets the ascii value
 ascii_value = ascii_value + 1 #Adds 1 to asciiValue.
@@ -394,7 +394,7 @@ x.find()
 ```
 
 #### len()
-Technically len works on lists too, but basically, len gives you the length of something.
+Technically len() works on strings and lists. len() gives you the length of something.
 ```python
 myList = [5, 5, 5, 5] # There are 4 things inside my list
 myString = "Hello There" # There are 11 characters in my string, including the space
@@ -451,4 +451,10 @@ y = "aaaaaa"
 locationOfFirstA = y.find('a') #Remember it looks for the first 'a', which is index 0.
 print(locationOfFirstA) #Prints 0
 ```
+
+## Finished reading this entire document?
+Go through this lab one more time. You should be able to have no trouble understanding everything.
+https://stjohn.github.io/teaching/csci127/f18/lab2.html
+
+If you understand everything in the Professor's Lab, you are ready to move on.
 
