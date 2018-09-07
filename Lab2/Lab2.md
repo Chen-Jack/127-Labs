@@ -1,18 +1,19 @@
-This is meant to be a supplement to https://stjohn.github.io/teaching/csci127/f18/lab2.html.
+### This is meant to be a supplement to https://stjohn.github.io/teaching/csci127/f18/lab2.html.
 
 ## Type/Variables Refresher
 Remember that we were introduced to two Python types so far:
 
 **Integers** (Whole Numbers)
 ```python
-x = 5 # Remember that comments start with a hashtag. This will be ignored by Python.
+# Remember that comments start with a hashtag. This will be ignored by Python.
+x = 5 
 y = -12323232354353
 someVariableName = 12
 age = 24
 
 positiveNumber = -1 
 # Remember that variable names are just names. 
-# Just cause the name is "positiveNumber", doesnt mean it HAS to be positive.
+# Just because the name is "positiveNumber", doesnt mean it HAS to be positive.
 # However, it's up to you as the programmer to use variable names properly.
 
 ```
@@ -38,7 +39,8 @@ someValue = ""
 ```
 
 ### Type Operations
-Integers have access to the typical math operations.
+
+#### Integers have access to the typical math operations.
 ```python
 x = 1
 y = 2
@@ -49,7 +51,7 @@ print(x * y) # Output is 2 (Multiplication)
 print(x / y) # Output is 0.5 (Division)
 ```
 
-Strings have access to an operation called concatenation. (String Addition) </br>
+#### Strings have access to an operation called concatenation. (String Addition)
 This is done by using the "+" operation.
 ```python
 print("ABC" + "DEF") # Output is "ABCDEF"
@@ -72,15 +74,20 @@ print (1 + 1 ) #Output is 2. Because the inputs are not surrounded by quotes. Th
 print ("1" + "1") #Output is "11"
 
 ```
-Lastly, you have the ability to access a specific symbol of a string.
+
+#### Accessing symbols in a string
+Lastly, you have the ability to access a specific symbol/character of a string.
 ```python
 
-example = "Hello There" #This is a string because it has quotes around it
+example = "Hello There" # This is a string because it has quotes around it
+
+
 
 # To access the first symbol of a string, we write
-print( example[0] ) #Will print the first symbol in example. Output is "H"
+# Remember that the index starts at 0, not 1.
+print( example[0] ) # Will print the first symbol in example. Output is "H"
 
-#Remember that indexs start at 0
+
 
 print( example[3] ) #Will print the 4th symbol. Output is "l"
 
@@ -96,9 +103,9 @@ print (example[4353543] ) # Will cause an error. Our string does not have that m
 # Lists are created by using square brackets [].
 
 # Lists can have anything inside them.
-variable = [1,4,5,2] # A list of integers
+var = [1,4,5,2] # A list of integers, stored in the variable called var.
 
-anotherList = ["1", "a", "Hello", "Goodbye", "", " ", "?" ] # A list of strings
+anotherList = ["1", "a", "Hello", "Goodbye", "", " ", "?" ] # A list of strings, stored in the variable anotherList.
 
 y = [1, 5, "wow", "this is a string haha", -5] # A list containing a mixture of integers and strings
 
@@ -107,6 +114,8 @@ finalListExample = [ "1", 4, [ "a", "b", "c"], 0 , "hello"] # A mixed list, cont
 simpleList = [1,2,3] 
 mixedList = [ simpleList, 3, "a"] # This list also contains another list inside it.
 ```
+
+#### Accessing items in a list
 Just like strings, you have the ability access things inside the list.
 ```python
 # To access a spot inside your list, do the following
@@ -131,7 +140,7 @@ print(item) # Error. myList only has 5 things inside it. There is no 999999th in
 
 
 ## Loop Refresher
-Remember that to do something multiple times, we followed this general template
+Previously, when we had to do something multiple times, we followed this general template
 ```python
 
 # Prints "Hello" 5 times
@@ -151,10 +160,10 @@ Loops work by traveling through something called an iterable. An iterable can be
 > A data type that has a order to it.
 ```python
 
-# This is an iterable cause there is an order.
+# A list is an iterable cause there is an order.
 x = [5 , 1, 5] # First value is 5, next is 1, last value is 5.
 
-# This is also an iterable
+# A string is also an iterable cause there is an order.
 name = "Jack"  # First value is "J", then "a", "c", last value is "k".
 
 # Thus, we should know that
@@ -174,7 +183,7 @@ for i in range(5):
  print(i)
  
 #First, range(5) will "basically" return a list starting from 0, up to but not including 5.
-# Aka range(5) = [0,1,2,3,4]
+# Aka range(5) <=> [0,1,2,3,4]
 
 #So when we say
 for i in range(5):
@@ -184,16 +193,26 @@ for i in range(5):
 for i in [0,1,2,3,4]:
  print(i)
 
-# Therefore. i start at 0 on the first step, and will reassign itself on each step.
+# Therefore. i starts at 0 on the first step; Then prints(i); Then i becomes 1; Then prints(i)
+# Then i becomes 2; then prints(i) ... etc
 for i in [0,1,2,3,4]:  # First output is 0, then 1, then 2, then 3, and then 4.
  print(i)
  
 # Further proof.
+# number becomes 5; print(number); number becomes 2; print(number); number becomes 1; print(number)
 for number in [5,2,1]: #First output is 5, then 2, and then 1.
  print(number)
  
+# x becomes 3; prints(x); prints("A");  x becomes 2; prints(x); prints("A"); 
+# Lastly, x becomes 1; prints(x); prints("A")
+for x in [3,2,1]: # Output is: 3 "A" 2 "A" 1 "A"
+ print(x)
+ print("A") #Note that this is a string
+ 
 # This works with strings because strings are also iterable (Has an order)
-for letter in "WOW": # First output is "W", then "O", and then "W"
+# letter becomes "W", then print(letter). letter becomes "O", then print(letter)
+# finally, letter becomes "W", then print(letter).
+for letter in "WOW": # Output is "W", then "O", and then "W"
  print(letter)
 
 # Examples.
