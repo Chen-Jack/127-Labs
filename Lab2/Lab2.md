@@ -193,14 +193,16 @@ for i in range(5):
 for i in [0,1,2,3,4]:
  print(i)
 
-# Therefore. i starts at 0 on the first step; Then prints(i); Then i becomes 1; Then prints(i)
-# Then i becomes 2; then prints(i) ... etc
-for i in [0,1,2,3,4]:  # First output is 0, then 1, then 2, then 3, and then 4.
+# EXAMPLES
+
+# i starts at 0 on the first step, then prints(i); Next, i becomes 1, then prints(i)
+# Next, i becomes 2, then prints(i) ... etc etc
+for i in [0,1,2,3,4]:  # Output is 0, 1, 2, 3, 4
  print(i)
  
 # Further proof.
 # number becomes 5; print(number); number becomes 2; print(number); number becomes 1; print(number)
-for number in [5,2,1]: #First output is 5, then 2, and then 1.
+for number in [5,2,1]: # Output is 5, 2, 1
  print(number)
  
 # x becomes 3; prints(x); prints("A");  x becomes 2; prints(x); prints("A"); 
