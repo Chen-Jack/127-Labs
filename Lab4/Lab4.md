@@ -150,7 +150,7 @@ print( num1 + num2 )
 
 ```
 
-## Decisions (if-else statements)
+## Decisions (if-elif-else statements)
 When you want to things conditionally in your code, you use if-else statements. What do I mean by conditionally? It lets your program run and have different outcomes.
 
 ### Conditions
@@ -206,7 +206,7 @@ if( 0 >= 0 ):
   
 ```
 
-### If-Else
+### Else statement
 We can expand the if statement with an else statement. The else statement will execute by default, ONLY when the if statement is False. Since the else statement will run by default, it does not need a condition.
 
 
@@ -262,7 +262,7 @@ else:
   print("Uh. Here's some milk")
 ```
 
-### if,elif, else
+### Elif statement
 Before with if-else, we had two outcomes. Now, lets expand it to have as many outcomes as possible. To do so, we use "elif".
 ```python
 # Just like if, you need to put a condition that is either true or false inside the elif statement.
