@@ -18,6 +18,21 @@ y = False # This is a boolean
 z = "true" # This is a string
 ```
 
+## type()
+The command type() will get the type of a variable.
+```python
+x = 2;
+print( type(x) ) # Output "Integer"
+
+y = 0.222;
+print( type(y) ) # Output "Float"
+
+z = "hello"
+print( type(z) ) # Output "String"
+
+n = True
+print( type(n) ) # Output "Boolean"
+```
 
 ## Type Conversion/Casting
 
@@ -27,18 +42,18 @@ You can convert a string into an integer using int(), but only if the string loo
 ```python
 x = "4" # This is a string because it has quotes.
 # Adding two strings will concatenate the strings.
+print( type(x) ) # Prints out "String"
 print( x + x ) # Prints out 44.
 
 # Convert 'x' into an integer, and stores the new version inside the variable 'y'
 y = int(x) # y is 4, not "4"
-
+print( type(y) ) # Prints out "Integer"
 print( y + y ) # Prints out 8.
 
 
 # Another Example
 a = "10"
 print( a + a ) # Prints out "1010"
-
 print( int(a) + int(a) ) #prints out 20
 
 
@@ -73,12 +88,23 @@ print( money * 2 ) # Prints out 200.50
 # Small example
 x = 2 # x is an integer.
 y = float(2) # y is a float.
+print( type(y) ) # Prints out "Float"
 print( y ) # Prints 2.0, not 2
 
 ```
-#### Is there really a big difference between between a integer and float?
-Yes. Even though you can do most basic math with either of them, there are certain scenarios where they differ. Not only that,
-an integer and float is very different in the perspective of a computer.
+#### Note, type conversion doesn't change the original, it makes a new copy of the converted value. That is why you need to save it if you want to keep the converted version.
+```python
+x = 2 # This is an integer
+
+print( type(x) ) # Output is "Integer"
+y = str(x) # Created a string copy of x, and saved it inside the variable "y"
+print( type(y) ) # Output is "String"
+
+print( type(x) ) # Output is "Integer".  Even though you used str(), the original still stays the same
+```
+
+#### Is there actually a significant difference between a integer and float?
+Yes
 
 #### str()
 Just like how you can convert a string into an integer or float, you can also do the opposite. To convert
@@ -93,6 +119,7 @@ print( age + age ) # Prints out "2424"
 # This also works on decimal numbers.
 debt = 0.50 # This is a float
 debt = str(debt) # Turn debt into a string, and store it inside "debt"
+print( type(debt) ) # Prints out "String"
 print( debt + debt ) # Prints out "0.500.50", not 1.0
 
 # Another example
@@ -118,14 +145,14 @@ Wrong solution
 ```python
 # First, we need to ask for the user to enter their age through input.
 print("Please enter your age")
-age = input() # Remember this is a string.
+age = input() # Remember all inputs are strings
 print( age + 5 ) # ERROR, adding a string into an integer
 ```
 Correct solution
 ```python
 # First, we need to ask for the user to enter their age through input.
 print("Please enter your age")
-age = input() # Remember this is a string. So let us convert it into an integer
+age = input() # Remember that all inputs are strings. So let us convert it into an integer
 age = int(age) # Convert age into an integer, and store it inside the variable 'age'.
 print( age + 5 ) # VALID, integer + integer.
 
