@@ -154,3 +154,20 @@ foo(4) # This will print 4, not 123
 
 ```
  
+## Sending something outside of the function.
+We recalled that to send something inside the function, we used arguments. To send something out, we the "return" keyword.
+```python
+def foo():
+  print("I will now send out the value 3")
+  return 3
+  
+# Executing foo().
+foo() # you might notice that nothing happned regarding 3.
+
+# Executing foo() again, but we can capture the return value inside a variable
+x = foo() # foo() will return 3. Therefore, x = 3
+
+# Executing foo() again again, but we are using it inside print().
+print( foo() ) # foo() will return 3. Therefore, this leads to print(3).
+
+```
