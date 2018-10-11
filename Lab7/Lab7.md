@@ -43,8 +43,8 @@ To execute a function, use the following syntax.
 def foo():
   print("Hello")
 
-//To call a function, just use the name, followed by a pair of parenthesis.
-foo() //Executes the function foo. This will result in a print statement, "Hello"
+# To call a function, just use the name, followed by a pair of parenthesis.
+foo() # Executes the function foo. This will result in a print statement, "Hello"
 
 ```
 
@@ -52,11 +52,11 @@ foo() //Executes the function foo. This will result in a print statement, "Hello
 Let us look as some example functions that have no inputs.
 ```python
 
-//A function called sayHello. The function prints 'Hello'.
+# A function called sayHello. The function prints 'Hello'.
 def sayHello():
   print("Hello")
 
-//A function called printNurseryRhyme(). Prints out the lyrics from "Twinkle Twinkle Little Star"
+# A function called printNurseryRhyme(). Prints out the lyrics from "Twinkle Twinkle Little Star"
 def printNurseryRhyme():
   print("Twinkle Twinkle Little Star")
   print("How I wonder what you are.")
@@ -73,12 +73,12 @@ What about functions like len() and print()? You can put stuff inside it? How do
 Arguments are things that you can pass inside a function. Let us look at an example function called add().
 
 ```python
-// The two arguments in this function are called x,y. We can now pass things inside to the function.
+# The two arguments in this function are called x,y. We can now pass things inside to the function.
 def add(x,y):
   print(x + y)
   
-//We are calling add, but we are also passing in two values, 2 and 3.
-add(2,3) //This will print 5
+# We are calling add, but we are also passing in two values, 2 and 3.
+add(2,3) # This will print 5
 ```
 
 ### How do arguments work?
@@ -87,29 +87,31 @@ Arguments are essentially variables, so...
 def add(x,y):
   print(x + y)
   
-//When we call add(), we passed in 2 and 5.
-add(2,5) //According to the definition of add, x = 2 and y = 5.
+# When we call add(), we passed in 2 and 5.
+add(2,5) # According to the definition of add, x = 2 and y = 5.
 ```
-</br>
-More examples
+
+
+#### More examples
 ```python
-//Defining a function called greet(). This has one argument called name
+# Defining a function called greet(). This has one argument called name
 def greet(name):
   print("Hello", name)
   
-//Calling greet, and passing in "Jack" as the first argument
-greet("Jack") //According to the definition of greet(), name = "Jack"
+# Calling greet, and passing in "Jack" as the first argument
+greet("Jack") # According to the definition of greet(), name = "Jack"
 ```
+
 ```python
-//The same if-else statement we used before, but now in function for.
-//The function is called checkAge(), and it prints whether you are old enough to buy alchohol.
+# The same if-else statement we used before, but now in function for.
+# The function is called checkAge(), and it prints whether you are old enough to buy alchohol.
 def checkAge(age):
   if(age >= 21):
     print("Here's a pint of beer")
   else:
     print("Here's milk...")
   
-//Executing the function checkAge()
+# Executing the function checkAge()
 checkAge(24) //According to the definition, age = 24.
 
 ```
@@ -148,7 +150,7 @@ def foo(a): #This "a", is not the same "a" outside it.
   print(a)
 
 # Executing foo(), and passing the value 4 inside it.
-foo(4) //This will print 4, not 123
+foo(4) # This will print 4, not 123
 
 ```
  
