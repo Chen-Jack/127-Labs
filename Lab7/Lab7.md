@@ -26,17 +26,20 @@ color()
 ## Defining a basic function
 To define a function, the following syntax is used.
 ```python
-//The function is called foo
+#The function is called foo
 
 def foo():
-  # Insert as many commands as you want in here
+  # Command 1
+  # Command 2
+  ...
+  # Command 3
 
 ```
 
 ## Executing a function (aka Calling a function)
 To execute a function, use the following syntax.
 ```python
-//Defined a function called foo that will print "Hello" when executed. However, defining is not the same as executing
+#Defined a function called foo that will print "Hello" when executed. However, defining is not the same as executing
 def foo():
   print("Hello")
 
@@ -88,8 +91,7 @@ def add(x,y):
 add(2,5) //According to the definition of add, x = 2 and y = 5.
 ```
 </br>
-Another example
-
+More examples
 ```python
 //Defining a function called greet(). This has one argument called name
 def greet(name):
@@ -97,4 +99,56 @@ def greet(name):
   
 //Calling greet, and passing in "Jack" as the first argument
 greet("Jack") //According to the definition of greet(), name = "Jack"
+```
+```python
+//The same if-else statement we used before, but now in function for.
+//The function is called checkAge(), and it prints whether you are old enough to buy alchohol.
+def checkAge(age):
+  if(age >= 21):
+    print("Here's a pint of beer")
+  else:
+    print("Here's milk...")
+  
+//Executing the function checkAge()
+checkAge(24) //According to the definition, age = 24.
+
+```
+
+
+### REMEMBER, a function should not know what happens outside it's view
+```python
+x = 5 # This is a variable with the value 5
+
+# Bad style
+def foo():
+  print("Hello, World")
+  print( x + 5 )        # BAD, DO NOT USE VARIABLES OUTSIDE THE FUNCTION DIRECTLY
+
+foo()
+```
+```python
+x = 5 # This is a variable with the value 5
+
+# Better style
+def foo(n):
+  print("Hello, World")
+  print(n + 5)      # Good. You can access the variable outside by passing it inside the function.
+
+foo(x)
+
+```
+
+### REMEMBER, the variables inside a function are different from outside it.
+```python
+a = 123 # This is a variable called 123
+
+# Defining a function called foo, that takes one argument called "a".
+# Remember what we talked about 10 lines ago. A function should not know what happens outside it
+def foo(a): #This "a", is not the same "a" outside it.
+  print(a)
+
+# Executing foo(), and passing the value 4 inside it.
+foo(4) //This will print 4, not 123
+
+```
  
