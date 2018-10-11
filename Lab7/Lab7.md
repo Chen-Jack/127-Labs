@@ -155,7 +155,7 @@ foo(4) # This will print 4, not 123
 ```
  
 ## Sending something outside of the function.
-We recalled that to send something inside the function, we used arguments. To send something out, we the "return" keyword.
+We recalled that to send something inside the function, we used arguments. To send something out, we the "return" keyword. 
 ```python
 def foo():
   print("I will now send out the value 3")
@@ -169,5 +169,18 @@ x = foo() # foo() will return 3. Therefore, x = 3
 
 # Executing foo() again again, but we are using it inside print().
 print( foo() ) # foo() will return 3. Therefore, this leads to print(3).
+
+```
+### REMINDER, the function automatically ends when the "return" keyword is used.
+```python
+# A function that takes two arguments, x and y. The function will add the two and return the sum.
+def add(x,y):
+  sum = x + y
+  return sum   # return was used. The function ends here.
+  print("The sum is", sum)  # This command will not execute since return was already called.
+  
+
+# Calling add()
+n = add(4,4) # Note that the print statement is not executed because of the way the function was defined
 
 ```
