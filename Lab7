@@ -1,0 +1,44 @@
+# Functions
+
+
+# Defining a function
+To define a function, the following syntax is used.
+```python
+//The function is called foo
+//The function takes two arguments
+//The first argument is called x, the second argument is called y
+
+def foo(x, y):
+  # Insert as many commands as you want in here
+
+```
+
+# Executing a function
+To execute a function, use the following syntax.
+```python
+//Defined a function called foo. However, this does not call it yet
+def foo():
+  print("Hello")
+
+//To call a function, just use the name, followed by a pair of parenthesis.
+foo() //Executes the function foo. This will result in a print statement, "Hello"
+
+```
+
+## Example functions (Without arguments)
+Let us look as some example functions that have no inputs.
+```python
+
+//A function called sayHello. The function prints 'Hello'.
+def sayHello():
+  print("Hello")
+
+//A function called printNurseryRhyme(). Prints out the lyrics from "Twinkle Twinkle Little Star"
+def printNurseryRhyme():
+  print("Twinkle Twinkle Little Star")
+  print("How I wonder what you are.")
+  print("Up above the world so high")
+  print("Like a diamond in the sky")
+  print("Twinkle, twinkle little star")
+  print("How I wonder what you are")
+```
