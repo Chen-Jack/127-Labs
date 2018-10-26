@@ -71,11 +71,11 @@ def printNurseryRhyme():
 ## How to send something inside a function?
 What about functions like len() and print()? Can't you put stuff inside those functions? How do I do that with my own functions?
 
-### This leads us to the concept of arguments.
-Arguments are things that you can "pass" into a function. Let us look at an example function called add().
+### This leads us to the concept of Parameters.
+Parameters allow us to "pass" values into a function. Let us look at an example function called add().
 
 ```python
-# The two arguments in this function are called x,y. We can now pass things inside to the function.
+# The two parameters in this function are called x,y. We can now pass things inside to the function.
 def add(x,y):
   print(x + y)
   
@@ -83,24 +83,24 @@ def add(x,y):
 add(2,3) # This will print 5
 ```
 
-### How do arguments work?
-Arguments are essentially variables, so...
+### How do Parameters work?
+Parameters are essentially variables, so the values we pass in are assigned to our parameters.
 ```python
 def add(x,y):
   print(x + y)
   
-# We will call add() and we will pass in 2 and 5 as our arguments.
+# We will call add() and we will pass in 2 and 5 into our function.
 add(2,5) # According to the definition of add, x = 2 and y = 5.
 ```
 
 
 #### More examples
 ```python
-# Defining a function called greet(). This has one argument called name.
+# Defining a function called greet(). This has one parameter called name.
 def greet(name):
   print("Hello", name)
   
-# Calling greet, and passing in "Jack" as the first argument
+# Calling greet, and passing in "Jack" as our first value.
 greet("Jack") # According to the definition of greet(), name = "Jack"
 ```
 
@@ -146,7 +146,7 @@ foo(x)
 ```python
 a = 123 # This is a variable called 123
 
-# Let us define a function called foo, that takes one argument called "a".
+# Let us define a function called foo, that takes one parameter called "a".
 # Remember that a function should not know what happens outside it!
 def foo(a): #This "a", is not the same "a" outside it.
   print(a)
@@ -162,7 +162,7 @@ Since a function should not know what happens outside of its definition, you can
 # Example. Write a program that will check if a number is greater than 20.
 
 # Since I am writing a function, I do not care what number they pass in. I do not care what the variable they pass in is called. I can just write my function seperately.
-# I create a argument variable called x. I don't know what number x will be, but that doesn't matter. You can write
+# I create a parameter variable called x. I don't know what number x will be, but that doesn't matter. You can write
 # the function assuming that it is a number.
 def isGreaterThan20(x): 
   if(x > 20):
@@ -186,7 +186,7 @@ isGreaterThan20(n) # prints True
 
  
 ## Sending something outside of the function.
-We recalled that to send something inside the function, we used arguments. To send something out, we the "return" keyword. 
+We recalled that to send something inside the function, we used parameters. To send something out, we the "return" keyword. 
 ```python
 def foo():
   print("I will now send out the value 3")
@@ -204,7 +204,7 @@ print( foo() ) # foo() will return 3. Therefore, this leads to print(3).
 ```
 ### REMINDER, the function automatically ends when the "return" keyword is used.
 ```python
-# A function that takes two arguments, x and y. The function will add the two and return the sum.
+# A function that takes two parameter, x and y. The function will add the two and return the sum.
 def add(x,y):
   sum = x + y
   return sum   # return was used. The function ends here.
